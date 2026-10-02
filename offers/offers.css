@@ -4,7 +4,10 @@
 
 .offers-page {
     width: 100%;
+
     padding-bottom: 60px;
+
+    overflow-x: hidden;
 }
 
 
@@ -15,9 +18,26 @@
 .offers-header {
     width: 90%;
     max-width: 1150px;
+
     margin: 0 auto;
+
     padding: 40px 0 30px;
+
     text-align: center;
+}
+
+.offers-header h1 {
+    line-height: 1.5;
+}
+
+.offers-header p {
+    max-width: 700px;
+
+    margin: 8px auto 0;
+
+    color: #777;
+
+    line-height: 1.8;
 }
 
 
@@ -28,33 +48,48 @@
 .offers-section {
     width: 90%;
     max-width: 1150px;
+
     margin: 0 auto 45px;
 }
 
 .offers-section-header {
     margin-bottom: 20px;
+
     padding-bottom: 12px;
+
     border-bottom: 1px solid #eeeeee;
 }
 
 .offers-section-label {
     display: block;
+
     margin-bottom: 5px;
+
     color: #14b8a6;
+
     font-size: 13px;
+
     font-weight: bold;
 }
 
 .offers-section-header h2 {
     margin: 0 0 5px;
+
     color: #222;
+
     font-size: 22px;
+
+    line-height: 1.5;
 }
 
 .offers-section-header p {
     margin: 0;
+
     color: #888;
+
     font-size: 13px;
+
+    line-height: 1.7;
 }
 
 
@@ -64,7 +99,10 @@
 
 .offers-products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
     gap: 18px;
 }
 
@@ -74,12 +112,21 @@
 ============================== */
 
 .offer-card {
+    min-width: 0;
+
     overflow: hidden;
+
     background-color: #ffffff;
+
     border: 1px solid #eeeeee;
+
     border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+
     cursor: pointer;
+
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
@@ -87,7 +134,9 @@
 
 .offer-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
 }
 
 
@@ -97,19 +146,28 @@
 
 .offer-image {
     position: relative;
+
     width: 100%;
     height: 170px;
+
     overflow: hidden;
+
     background-color: #fafafa;
 }
 
 .offer-image img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     padding: 10px;
+
     box-sizing: border-box;
+
     object-fit: contain;
+
+    transition: transform 0.2s ease;
 }
 
 .offer-card:hover .offer-image img {
@@ -123,15 +181,25 @@
 
 .discount-badge {
     position: absolute;
+
     top: 10px;
     right: 10px;
+
     z-index: 2;
+
     padding: 5px 9px;
+
     border-radius: 20px;
+
     background-color: #e53935;
+
     color: #ffffff;
+
     font-size: 11px;
+
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 
@@ -140,35 +208,54 @@
 ============================== */
 
 .offer-info {
+    min-width: 0;
+
     padding: 14px;
 }
 
 .offer-category {
     display: block;
+
     margin-bottom: 5px;
+
     color: #14b8a6;
+
     font-size: 11px;
+
     font-weight: bold;
 }
 
 .offer-info h3 {
     margin: 0 0 7px;
+
     color: #222;
+
     font-size: 16px;
+
     line-height: 1.5;
 
     display: -webkit-box;
+
     -webkit-line-clamp: 2;
+
     -webkit-box-orient: vertical;
+
     overflow: hidden;
+
+    overflow-wrap: anywhere;
 }
 
 .offer-description {
     height: 38px;
+
     margin: 0 0 8px;
+
     color: #777;
+
     font-size: 12px;
+
     line-height: 1.6;
+
     overflow: hidden;
 }
 
@@ -179,7 +266,9 @@
 
 .offer-rating {
     margin-bottom: 8px;
+
     color: #d89b00;
+
     font-size: 12px;
 }
 
@@ -190,20 +279,32 @@
 
 .price-area {
     display: flex;
+
     align-items: center;
+
+    flex-wrap: wrap;
+
     gap: 8px;
+
     margin-bottom: 10px;
 }
 
 .current-price {
     color: #14b8a6;
+
     font-size: 16px;
+
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 .old-price {
     color: #999;
+
     font-size: 12px;
+
+    white-space: nowrap;
 }
 
 
@@ -213,15 +314,28 @@
 
 .add-offer-cart {
     width: 100%;
+
+    min-height: 40px;
+
     padding: 9px 10px;
+
     border: none;
+
     border-radius: 7px;
+
     background-color: #14b8a6;
+
     color: #ffffff;
+
     font-family: inherit;
+
     font-size: 13px;
+
     font-weight: bold;
+
     cursor: pointer;
+
+    transition: background-color 0.2s ease;
 }
 
 .add-offer-cart:hover {
@@ -235,11 +349,18 @@
 
 .no-offers {
     display: none;
+
     padding: 30px;
+
     text-align: center;
+
     color: #777;
+
     background-color: #fafafa;
+
     border-radius: 10px;
+
+    line-height: 1.8;
 }
 
 
@@ -249,8 +370,15 @@
 
 @media (max-width: 1000px) {
 
+    .offers-header,
+    .offers-section {
+        width: 92%;
+    }
+
+
     .offers-products-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
     }
 
 }
@@ -262,15 +390,42 @@
 
 @media (max-width: 750px) {
 
+    .offers-header {
+        padding: 35px 0 25px;
+    }
+
+
+    .offers-section {
+        margin-bottom: 35px;
+    }
+
+
     .offers-products-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         gap: 15px;
     }
+
 
     .offer-image {
         height: 180px;
     }
 
+
+    .offer-info {
+        padding: 13px;
+    }
+
+
+    .offer-info h3 {
+        font-size: 15px;
+    }
+
+
+    .offer-description {
+        font-size: 11px;
+    }
 }
 
 
@@ -280,20 +435,172 @@
 
 @media (max-width: 500px) {
 
-    .offers-products-grid {
-        grid-template-columns: 1fr;
+    .offers-page {
+        padding-bottom: 45px;
     }
 
-    .offer-image {
-        height: 220px;
-    }
 
     .offers-header {
-        padding-top: 30px;
+        width: 94%;
+
+        padding: 30px 0 22px;
     }
+
+
+    .offers-header h1 {
+        font-size: 25px;
+    }
+
+
+    .offers-header p {
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    .offers-section {
+        width: 94%;
+
+        margin-bottom: 30px;
+    }
+
+
+    .offers-section-header {
+        margin-bottom: 15px;
+
+        padding-bottom: 10px;
+    }
+
+
+    .offers-section-label {
+        font-size: 12px;
+    }
+
 
     .offers-section-header h2 {
         font-size: 20px;
     }
 
+
+    .offers-section-header p {
+        font-size: 12px;
+    }
+
+
+    .offers-products-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .offer-card {
+        border-radius: 11px;
+    }
+
+
+    .offer-image {
+        height: 220px;
+    }
+
+
+    .offer-info {
+        padding: 14px;
+    }
+
+
+    .offer-category {
+        font-size: 11px;
+    }
+
+
+    .offer-info h3 {
+        font-size: 17px;
+    }
+
+
+    .offer-description {
+        height: auto;
+
+        max-height: 42px;
+
+        font-size: 12px;
+    }
+
+
+    .offer-rating {
+        margin-bottom: 9px;
+    }
+
+
+    .current-price {
+        font-size: 17px;
+    }
+
+
+    .old-price {
+        font-size: 12px;
+    }
+
+
+    .add-offer-cart {
+        min-height: 44px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* ==============================
+   الهاتف الصغير
+============================== */
+
+@media (max-width: 360px) {
+
+    .offers-header {
+        width: 95%;
+
+        padding-top: 25px;
+    }
+
+
+    .offers-header h1 {
+        font-size: 23px;
+    }
+
+
+    .offers-section {
+        width: 95%;
+    }
+
+
+    .offers-section-header h2 {
+        font-size: 18px;
+    }
+
+
+    .offer-image {
+        height: 200px;
+    }
+
+
+    .offer-info {
+        padding: 12px;
+    }
+
+
+    .offer-info h3 {
+        font-size: 16px;
+    }
+
+
+    .current-price {
+        font-size: 16px;
+    }
+
+
+    .add-offer-cart {
+        min-height: 43px;
+    }
 }

@@ -9,6 +9,8 @@
     padding: 40px 0 70px;
 
     background-color: #fafafa;
+
+    overflow-x: hidden;
 }
 
 
@@ -32,6 +34,7 @@
     color: #222;
 
     font-size: 30px;
+    line-height: 1.5;
 }
 
 
@@ -53,7 +56,7 @@
 
     grid-template-columns:
         90px
-        1fr
+        minmax(0, 1fr)
         auto
         auto
         35px;
@@ -92,6 +95,8 @@
     background-color: #fafafa;
 
     border-radius: 10px;
+
+    flex-shrink: 0;
 }
 
 
@@ -102,8 +107,6 @@
     display: block;
 
     padding: 6px;
-
-    box-sizing: border-box;
 
     object-fit: contain;
 }
@@ -127,6 +130,8 @@
     font-weight: bold;
 
     line-height: 1.5;
+
+    overflow-wrap: anywhere;
 }
 
 
@@ -136,6 +141,8 @@
     color: #777;
 
     font-size: 13px;
+
+    overflow-wrap: anywhere;
 }
 
 
@@ -158,6 +165,8 @@
     align-items: center;
 
     gap: 7px;
+
+    flex-shrink: 0;
 }
 
 
@@ -223,6 +232,8 @@
 
     font-size: 15px;
     font-weight: bold;
+
+    white-space: nowrap;
 }
 
 
@@ -254,6 +265,8 @@
     cursor: pointer;
 
     transition: 0.2s ease;
+
+    flex-shrink: 0;
 }
 
 
@@ -307,6 +320,8 @@
     color: #777;
 
     font-size: 14px;
+
+    line-height: 1.8;
 }
 
 
@@ -429,6 +444,8 @@
     align-items: center;
     justify-content: space-between;
 
+    gap: 15px;
+
     margin-bottom: 12px;
 
     color: #555;
@@ -439,6 +456,8 @@
 
 .cart-summary-row strong {
     color: #222;
+
+    white-space: nowrap;
 }
 
 
@@ -492,6 +511,8 @@
 .clear-cart-button {
     flex: 1;
 
+    min-height: 45px;
+
     padding: 12px 18px;
 
     border: none;
@@ -538,10 +559,15 @@
 
 @media (max-width: 850px) {
 
+    .cart-container {
+        width: 92%;
+    }
+
+
     .cart-item {
         grid-template-columns:
             80px
-            1fr
+            minmax(0, 1fr)
             auto
             35px;
 
@@ -557,6 +583,8 @@
 
     .cart-item-quantity {
         grid-column: 2;
+
+        grid-row: 2;
     }
 
 
@@ -600,19 +628,21 @@
 
     .cart-item {
         grid-template-columns:
-            70px
-            1fr
+            68px
+            minmax(0, 1fr)
             32px;
 
         gap: 10px;
 
         padding: 12px;
+
+        border-radius: 10px;
     }
 
 
     .cart-item-image {
-        width: 70px;
-        height: 70px;
+        width: 68px;
+        height: 68px;
 
         grid-column: 1;
 
@@ -624,6 +654,8 @@
         grid-column: 2;
 
         grid-row: 1;
+
+        min-width: 0;
     }
 
 
@@ -639,9 +671,11 @@
 
         grid-row: 3;
 
-        min-width: auto;
+        min-width: 0;
 
         text-align: right;
+
+        white-space: normal;
     }
 
 
@@ -655,6 +689,8 @@
 
 
     .cart-item-name {
+        margin-bottom: 5px;
+
         font-size: 15px;
     }
 
@@ -665,12 +701,155 @@
     }
 
 
-    .cart-actions {
-        flex-direction: column;
+    .quantity-button {
+        width: 29px;
+        height: 29px;
+    }
+
+
+    .quantity-number {
+        min-width: 23px;
+
+        font-size: 13px;
+    }
+
+
+    .cart-benefits {
+        padding: 13px;
+    }
+
+
+    .benefit-title {
+        font-size: 14px;
+    }
+
+
+    .benefit-message {
+        font-size: 12px;
     }
 
 
     .cart-summary {
+        margin-top: 20px;
+
         padding: 17px;
+    }
+
+
+    .cart-summary-row {
+        font-size: 13px;
+    }
+
+
+    .cart-summary-total span,
+    .cart-summary-total strong {
+        font-size: 17px;
+    }
+
+
+    .cart-actions {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .checkout-button,
+    .clear-cart-button {
+        width: 100%;
+
+        min-height: 46px;
+    }
+
+
+    .empty-cart {
+        padding: 35px 15px;
+    }
+
+
+    .empty-cart-icon {
+        font-size: 35px;
+    }
+
+
+    .empty-cart h2 {
+        font-size: 20px;
+    }
+
+
+    .empty-cart p {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================================
+   الهاتف الصغير
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .cart-container {
+        width: 95%;
+    }
+
+
+    .cart-item {
+        grid-template-columns:
+            60px
+            minmax(0, 1fr)
+            30px;
+
+        gap: 8px;
+
+        padding: 10px;
+    }
+
+
+    .cart-item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .cart-item-name {
+        font-size: 14px;
+    }
+
+
+    .cart-item-price,
+    .cart-item-color {
+        font-size: 11px;
+    }
+
+
+    .quantity-button {
+        width: 27px;
+        height: 27px;
+
+        font-size: 14px;
+    }
+
+
+    .quantity-number {
+        min-width: 20px;
+
+        font-size: 12px;
+    }
+
+
+    .remove-cart-item {
+        width: 29px;
+        height: 29px;
+    }
+
+
+    .cart-summary {
+        padding: 15px;
+    }
+
+
+    .cart-summary-row {
+        font-size: 12px;
     }
 }

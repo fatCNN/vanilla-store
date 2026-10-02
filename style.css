@@ -18,6 +18,8 @@
 
     font-family: Arial, sans-serif;
     line-height: 1.6;
+
+    overflow-x: hidden;
 }
 
 .home-page *,
@@ -110,6 +112,8 @@
     align-items: center;
 
     gap: 10px;
+
+    flex-wrap: wrap;
 }
 
 .home-language-button,
@@ -232,6 +236,8 @@
     overflow: hidden;
 
     border-radius: 50%;
+
+    flex-shrink: 0;
 }
 
 .home-logo img {
@@ -289,6 +295,7 @@
 
 .home-search-bar button {
     width: 55px;
+    min-width: 55px;
 
     border: none;
 
@@ -334,6 +341,8 @@
     font-size: 15px;
     font-weight: bold;
 
+    white-space: nowrap;
+
     transition: color 0.2s ease;
 }
 
@@ -352,6 +361,7 @@
 
 .home-cart {
     width: fit-content;
+    max-width: calc(100% - 12%);
 
     margin: 18px 6% 0;
 
@@ -555,6 +565,8 @@
 
     font-size: 21px;
     font-weight: bold;
+
+    text-align: center;
 }
 
 .home-category-card:hover {
@@ -585,6 +597,10 @@
     justify-content: space-between;
 
     gap: 30px;
+}
+
+.home-university-title {
+    min-width: 0;
 }
 
 .home-university-title h2 {
@@ -647,6 +663,10 @@
     gap: 20px;
 }
 
+.home-discounts-title {
+    min-width: 0;
+}
+
 .home-discounts-title h2 {
     margin: 0 0 7px;
 
@@ -673,6 +693,8 @@
 
     font-size: 14px;
 
+    white-space: nowrap;
+
     transition: 0.2s ease;
 }
 
@@ -696,6 +718,8 @@
     scroll-behavior: smooth;
 
     scrollbar-width: none;
+
+    padding-bottom: 5px;
 }
 
 .home-discounts-slider::-webkit-scrollbar {
@@ -771,6 +795,8 @@
     gap: 10px;
 
     margin-bottom: 10px;
+
+    flex-wrap: wrap;
 }
 
 .home-old-price {
@@ -865,6 +891,8 @@
     flex-direction: column;
 
     align-items: flex-start;
+
+    min-width: 0;
 }
 
 .home-footer-brand h2 {
@@ -1038,6 +1066,10 @@
 
     width: min(440px, 100%);
 
+    max-height: calc(100vh - 40px);
+
+    overflow-y: auto;
+
     padding: 35px;
 
     border-radius: 20px;
@@ -1153,6 +1185,7 @@
 }
 
 .home-login-form input {
+    width: 100%;
     height: 43px;
 
     margin-bottom: 15px;
@@ -1170,6 +1203,7 @@
 }
 
 .home-submit-login {
+    width: 100%;
     min-height: 45px;
 
     margin-top: 5px;
@@ -1308,19 +1342,41 @@
 @media (max-width: 700px) {
 
     .home-language-bar {
-        padding: 8px 4%;
+        min-height: auto;
+
+        padding: 10px 4%;
 
         flex-direction: column;
 
         justify-content: center;
+
+        gap: 8px;
+    }
+
+    .home-top-left-buttons {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .home-language-button,
+    .home-login-button {
+        min-height: 40px;
+
+        padding: 7px 13px;
+
+        font-size: 13px;
     }
 
     .home-social-links {
         display: none;
     }
 
+
+    /* شريط الإعلانات */
+
     .home-announcement-bar {
-        height: 40px;
+        height: 38px;
     }
 
     .home-announcement-text {
@@ -1329,48 +1385,131 @@
         animation-duration: 28s;
     }
 
+
+    /* الشعار */
+
+    .home-logo-bar {
+        padding: 18px 4%;
+    }
+
+    .home-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+
+    /* البحث */
+
+    .home-search-bar {
+        padding: 0 4% 15px;
+    }
+
+    .home-search-bar form {
+        height: 44px;
+    }
+
+    .home-search-bar input {
+        padding: 0 14px;
+
+        font-size: 14px;
+    }
+
+    .home-search-bar button {
+        width: 50px;
+        min-width: 50px;
+    }
+
+
+    /* القائمة */
+
     .home-nav {
-        gap: 20px;
+        justify-content: flex-start;
+
+        gap: 22px;
 
         padding: 12px 4%;
 
         overflow-x: auto;
 
-        justify-content: flex-start;
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .home-nav::-webkit-scrollbar {
+        display: none;
     }
 
     .home-nav a {
-        white-space: nowrap;
+        flex-shrink: 0;
 
         font-size: 13px;
     }
 
+
+    /* السلة */
+
     .home-cart {
-        margin-right: 4%;
-        margin-left: 4%;
+        max-width: calc(100% - 8%);
+
+        margin: 15px 4% 0;
+
+        padding: 9px 15px;
+
+        font-size: 13px;
     }
+
+
+    /* Hero */
 
     .home-hero {
         width: 92%;
 
-        margin-top: 20px;
+        min-height: auto;
+
+        margin: 20px auto 50px;
+
+        border-radius: 18px;
+
+        grid-template-columns: 1fr;
     }
 
     .home-hero-content {
-        padding: 40px 25px;
+        padding: 35px 22px;
     }
 
     .home-hero-content h1 {
-        font-size: 31px;
+        margin-bottom: 14px;
+
+        font-size: 30px;
+
+        text-align: center;
     }
 
     .home-hero-content p {
+        max-width: none;
+
         font-size: 15px;
+
+        line-height: 1.9;
+
+        text-align: center;
     }
 
     .home-hero-image {
-        min-height: 300px;
+        min-height: 280px;
     }
+
+    .home-shop-button {
+        bottom: 20px;
+
+        padding: 11px 25px;
+
+        font-size: 14px;
+    }
+
+
+    /* الأقسام */
 
     .home-categories,
     .home-university-offer,
@@ -1378,27 +1517,123 @@
         width: 92%;
     }
 
+    .home-categories {
+        margin-bottom: 55px;
+    }
+
+    .home-categories > h2 {
+        margin-bottom: 22px;
+
+        font-size: 24px;
+    }
+
     .home-categories-container {
-        gap: 15px;
+        gap: 14px;
     }
 
     .home-category-card {
         height: 190px;
+
+        border-radius: 15px;
+    }
+
+    .home-category-card span {
+        margin-bottom: 18px;
+
+        font-size: 18px;
+    }
+
+
+    /* عرض الجامعات */
+
+    .home-university-offer {
+        margin-bottom: 55px;
+
+        border-radius: 17px;
     }
 
     .home-university-offer-content {
-        padding: 28px 22px;
+        padding: 25px 20px;
 
         flex-direction: column;
 
-        align-items: flex-start;
+        align-items: stretch;
+
+        text-align: center;
+
+        gap: 20px;
+    }
+
+    .home-university-title h2 {
+        font-size: 24px;
+    }
+
+    .home-university-title p {
+        font-size: 14px;
+    }
+
+    .home-university-offer-button {
+        align-self: center;
+
+        padding: 11px 22px;
+
+        font-size: 14px;
+    }
+
+
+    /* الخصومات */
+
+    .home-discounts-section {
+        margin-bottom: 60px;
     }
 
     .home-discounts-header {
+        margin-bottom: 20px;
+
         flex-direction: column;
 
-        align-items: flex-start;
+        align-items: stretch;
+
+        gap: 14px;
     }
+
+    .home-discounts-title h2 {
+        font-size: 24px;
+    }
+
+    .home-discounts-title p {
+        font-size: 14px;
+    }
+
+    .home-discounts-button {
+        align-self: flex-start;
+
+        font-size: 13px;
+    }
+
+    .home-discounts-slider {
+        gap: 14px;
+    }
+
+    .home-discount-card {
+        min-width: 250px;
+        height: 320px;
+    }
+
+    .home-discount-overlay {
+        padding: 20px;
+    }
+
+    .home-discount-overlay h3 {
+        font-size: 19px;
+    }
+
+    .home-discount-arrow {
+        display: none;
+    }
+
+
+    /* Footer */
 
     .home-footer-container {
         width: 90%;
@@ -1406,7 +1641,9 @@
         grid-template-columns:
             repeat(2, 1fr);
 
-        gap: 35px 25px;
+        gap: 30px 20px;
+
+        padding: 40px 0 35px;
     }
 
     .home-footer-brand,
@@ -1414,8 +1651,28 @@
         grid-column: span 2;
     }
 
+    .home-footer-brand h2 {
+        font-size: 23px;
+    }
+
+    .home-footer-column h3 {
+        margin-bottom: 16px;
+
+        font-size: 16px;
+    }
+
+    .home-footer-column a {
+        font-size: 13px;
+    }
+
+    .home-footer-location p {
+        font-size: 13px;
+    }
+
     .home-footer-bottom {
         width: 90%;
+
+        padding: 18px 0;
 
         flex-direction: column;
 
@@ -1424,17 +1681,29 @@
         text-align: center;
     }
 
+
+    /* زر الدعم */
+
     .support-floating-button {
-        bottom: 18px;
-        left: 18px;
+        bottom: 16px;
+        left: 16px;
 
-        padding: 11px 15px;
+        padding: 10px 14px;
 
-        font-size: 14px;
+        font-size: 13px;
     }
+
+
+    /* العناوين */
 
     .page-title {
         font-size: 26px;
+    }
+
+    .page-description {
+        padding: 0 15px;
+
+        font-size: 13px;
     }
 }
 
@@ -1446,18 +1715,57 @@
 @media (max-width: 480px) {
 
     .home-top-left-buttons {
-        width: 100%;
+        gap: 7px;
+    }
 
-        justify-content: center;
+    .home-language-button,
+    .home-login-button {
+        padding: 7px 11px;
+
+        font-size: 12px;
     }
 
     .home-logo {
-        width: 90px;
-        height: 90px;
+        width: 82px;
+        height: 82px;
+    }
+
+    .home-search-bar input {
+        font-size: 13px;
+    }
+
+    .home-nav {
+        gap: 18px;
+    }
+
+    .home-nav a {
+        font-size: 12px;
+    }
+
+    .home-hero {
+        width: 94%;
+    }
+
+    .home-hero-content {
+        padding: 30px 18px;
     }
 
     .home-hero-content h1 {
         font-size: 27px;
+    }
+
+    .home-hero-content p {
+        font-size: 14px;
+    }
+
+    .home-hero-image {
+        min-height: 250px;
+    }
+
+    .home-categories,
+    .home-university-offer,
+    .home-discounts-section {
+        width: 94%;
     }
 
     .home-categories-container {
@@ -1465,16 +1773,20 @@
     }
 
     .home-category-card {
-        height: 220px;
+        height: 210px;
     }
 
     .home-discount-card {
-        min-width: 270px;
-        height: 320px;
+        min-width: 245px;
+        height: 310px;
     }
 
     .home-footer-container {
+        width: 92%;
+
         grid-template-columns: 1fr;
+
+        gap: 28px;
     }
 
     .home-footer-brand,
@@ -1482,8 +1794,16 @@
         grid-column: span 1;
     }
 
+    .home-footer-brand > p:not(.home-footer-domain):not(.home-footer-since) {
+        max-width: none;
+    }
+
     .home-login-box {
-        padding: 30px 20px;
+        width: 100%;
+
+        padding: 28px 18px;
+
+        border-radius: 16px;
     }
 
     .home-announcement-text {
@@ -1498,5 +1818,49 @@
 
     .page-description {
         font-size: 13px;
+    }
+
+    .support-floating-button {
+        bottom: 14px;
+        left: 14px;
+
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   منع مشاكل العرض على الشاشات الصغيرة جدًا
+   ===================================================== */
+
+@media (max-width: 360px) {
+
+    .home-language-button,
+    .home-login-button {
+        padding: 6px 9px;
+
+        font-size: 11px;
+    }
+
+    .home-nav {
+        gap: 15px;
+    }
+
+    .home-nav a {
+        font-size: 11px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 24px;
+    }
+
+    .home-category-card {
+        height: 190px;
+    }
+
+    .home-discount-card {
+        min-width: 225px;
     }
 }
