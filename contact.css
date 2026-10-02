@@ -1,0 +1,740 @@
+/* =========================================
+   إعدادات عامة
+========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   الهيدر
+========================================= */
+
+.home-header {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   شريط اللغة وتسجيل الدخول
+========================================= */
+
+.home-language-bar {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 10px 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.home-top-left-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    max-width: 100%;
+}
+
+
+.home-social-links {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    max-width: 100%;
+}
+
+
+.home-social-links a {
+    white-space: nowrap;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   شريط الإعلان المتحرك
+========================================= */
+
+.home-announcement-bar {
+    width: 100%;
+
+    height: 42px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background: #14b8a6;
+
+    display: flex;
+
+    align-items: center;
+
+    white-space: nowrap;
+}
+
+
+.home-announcement-track {
+    display: flex;
+
+    align-items: center;
+
+    width: max-content;
+
+    height: 100%;
+
+    flex-shrink: 0;
+
+    direction: ltr;
+
+    animation:
+        announcementLoop
+        30s
+        linear
+        infinite;
+
+    will-change: transform;
+}
+
+
+.announcement-content {
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+    width: max-content;
+
+    height: 100%;
+
+    white-space: nowrap;
+
+    padding: 0 25px;
+}
+
+
+.announcement-content span {
+    display: inline-block;
+
+    flex-shrink: 0;
+
+    white-space: nowrap;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+
+.announcement-content b {
+    display: inline-block;
+
+    flex-shrink: 0;
+
+    margin-left: 25px;
+
+    margin-right: 25px;
+
+    font-weight: normal;
+}
+
+
+/* =========================================
+   الحركة المستمرة
+========================================= */
+
+@keyframes announcementLoop {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform:
+            translateX(
+                calc(-1 * var(--announcement-width))
+            );
+    }
+
+}
+
+
+/* =========================================
+   الشعار
+========================================= */
+
+.home-logo-bar {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.home-logo {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* =========================================
+   البحث
+========================================= */
+
+.home-search-bar {
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 20px auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.home-search-bar input {
+    flex: 1;
+
+    min-width: 0;
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+
+.home-search-bar button {
+    flex-shrink: 0;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+}
+
+
+/* =========================================
+   القائمة
+========================================= */
+
+.home-nav {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 15px 20px;
+}
+
+
+.home-nav a {
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+
+.home-nav a.active {
+    font-weight: bold;
+}
+
+
+/* =========================================
+   صفحة التواصل
+========================================= */
+
+.contact-page {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    padding: 40px 20px 60px;
+}
+
+
+/* =========================================
+   عنوان الصفحة
+========================================= */
+
+.contact-header {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+
+.contact-header h1 {
+    margin: 0 0 15px;
+
+    font-size: 36px;
+}
+
+
+.contact-header p {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   بطاقات التواصل
+========================================= */
+
+.contact-info {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.contact-card {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+}
+
+
+.contact-icon {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+
+.contact-card h3 {
+    margin: 10px 0;
+}
+
+
+.contact-card p {
+    margin: 0;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   نموذج التواصل
+========================================= */
+
+.contact-form-section {
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: #fff;
+
+    border: 1px solid #e5e5e5;
+}
+
+
+.contact-form-section h2 {
+    margin-top: 0;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+
+.contact-form {
+    width: 100%;
+}
+
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+
+.form-group input,
+.form-group textarea {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+}
+
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+
+.file-name {
+    margin: 8px 0 0;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   زر الإرسال
+========================================= */
+
+.contact-submit {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-family: inherit;
+}
+
+
+/* =========================================
+   حالة النموذج
+========================================= */
+
+.form-status {
+    margin: 15px 0 0;
+
+    text-align: center;
+}
+
+
+.form-status.success {
+    font-weight: bold;
+}
+
+
+/* =========================================
+   زر الدعم
+========================================= */
+
+.support-button {
+    position: fixed;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    z-index: 1000;
+
+    padding: 12px 18px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   الشاشات المتوسطة
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-info {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   الهواتف
+========================================= */
+
+@media (max-width: 600px) {
+
+    .home-language-bar {
+        width: 100%;
+
+        padding: 10px;
+
+        justify-content: center;
+
+        flex-direction: column;
+    }
+
+
+    .home-top-left-buttons {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .home-social-links {
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+
+    .home-social-links a {
+        font-size: 14px;
+    }
+
+
+    /* شريط الإعلان */
+
+    .home-announcement-bar {
+        height: 40px;
+    }
+
+
+    .announcement-content {
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .announcement-content span {
+        font-size: 16px;
+    }
+
+
+    .announcement-content b {
+        margin-left: 18px;
+
+        margin-right: 18px;
+    }
+
+
+    /* البحث */
+
+    .home-search-bar {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+
+    .home-search-bar button {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+
+    /* القائمة */
+
+    .home-nav {
+        gap: 15px;
+
+        padding: 12px 10px;
+    }
+
+
+    .home-nav a {
+        font-size: 14px;
+    }
+
+
+    /* صفحة التواصل */
+
+    .contact-page {
+        padding: 30px 15px 45px;
+    }
+
+
+    .contact-header h1 {
+        font-size: 30px;
+    }
+
+
+    .contact-header p {
+        font-size: 16px;
+    }
+
+
+    .contact-info {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    .contact-form-section {
+        padding: 20px 15px;
+    }
+
+}
+
+
+/* =========================================
+   الهواتف الصغيرة جدًا
+========================================= */
+
+@media (max-width: 380px) {
+
+    .announcement-content span {
+        font-size: 14px;
+    }
+
+
+    .announcement-content b {
+        margin-left: 12px;
+
+        margin-right: 12px;
+    }
+
+
+    .home-social-links {
+        gap: 6px;
+    }
+
+
+    .home-social-links a {
+        font-size: 13px;
+    }
+
+
+    .home-nav {
+        gap: 10px;
+    }
+
+
+    .home-nav a {
+        font-size: 13px;
+    }
+
+
+    .contact-page {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>العروض - متجر فانيلا</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="stylesheet" href="offers.css">
+
+</head>
+
+<body class="home-page">
+
+<header class="home-header">
+
+    <div class="home-language-bar">
+
+        <div class="home-top-left-buttons">
+
+            <button
+                type="button"
+                class="home-language-button"
+            >
+                English
+            </button>
+
+            <a
+                href="../account.html"
+                class="home-login-button"
+            >
+                تسجيل الدخول
+            </a>
+
+        </div>
+
+        <div class="home-social-links">
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                Facebook
+            </a>
+
+            <a href="#">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="home-announcement-bar">
+
+        <div class="home-announcement-text">
+
+            <span>
+                🎁 عروض خاصة اليوم
+                &nbsp;&nbsp; | &nbsp;&nbsp;
+                🚚 توصيل سريع داخل بغداد
+                &nbsp;&nbsp; | &nbsp;&nbsp;
+                🛍️ اكتشفي منتجات متجر فانيلا
+                &nbsp;&nbsp; | &nbsp;&nbsp;
+            </span>
+
+            <span>
+                🎁 عروض خاصة اليوم
+                &nbsp;&nbsp; | &nbsp;&nbsp;
+                🚚 توصيل سريع داخل بغداد
+                &nbsp;&nbsp; | &nbsp;&nbsp;
+                🛍️ اكتشفي منتجات متجر فانيلا
+                &nbsp;&nbsp; | &nbsp;&nbsp;
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="home-logo-bar">
+
+        <a
+            href="../index.html"
+            class="home-logo"
+        >
+
+            <img
+                src="../products/static/my_logo.jpg"
+                alt="شعار متجر فانيلا"
+            >
+
+        </a>
+
+    </div>
+
+    <div class="home-search-bar">
+
+        <form id="home-search-form">
+
+            <input
+                type="search"
+                id="home-search-input"
+                placeholder="ابحث عن منتج..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                🔍
+            </button>
+
+        </form>
+
+    </div>
+
+    <nav class="home-nav">
+
+        <a href="../index.html">
+            الرئيسية
+        </a>
+
+        <a href="../products/products.html">
+            المنتجات
+        </a>
+
+        <a
+            href="offers.html"
+            class="active"
+        >
+            العروض %
+        </a>
+
+        <a href="../contact.html">
+            تواصل معنا
+        </a>
+
+        <a
+            href="../cart.html"
+            class="home-cart"
+        >
+            🛒 السلة
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+<main class="offers-page">
+
+    <section class="offers-header">
+
+        <span class="page-badge">
+            🔥 عروض متجر فانيلا
+        </span>
+
+        <h1 class="page-title">
+            عروض وخصومات مميزة
+        </h1>
+
+        <p class="page-description">
+            اكتشفي المنتجات المخفضة واستفيدي من أفضل الأسعار
+            المتوفرة حاليًا في متجر فانيلا.
+        </p>
+
+    </section>
+
+    <section class="offers-section">
+
+        <div class="offers-section-header">
+
+            <span class="offers-section-label">
+                🔥 عروض مميزة
+            </span>
+
+            <h2>
+                أكثر المنتجات تخفيضًا
+            </h2>
+
+            <p>
+                المنتجات الأربعة التي تحتوي على أعلى نسبة خصم.
+            </p>
+
+        </div>
+
+        <div
+            id="top-discounts"
+            class="offers-products-grid"
+        ></div>
+
+    </section>
+
+    <section class="offers-section">
+
+        <div class="offers-section-header">
+
+            <span class="offers-section-label">
+                🏷️ جميع الخصومات
+            </span>
+
+            <h2>
+                جميع العروض
+            </h2>
+
+            <p>
+                جميع المنتجات التي لديها سعر سابق وسعر حالي.
+            </p>
+
+        </div>
+
+        <div
+            id="all-discounts"
+            class="offers-products-grid"
+        ></div>
+
+        <p
+            id="no-offers"
+            class="no-offers"
+        >
+            لا توجد عروض حاليًا.
+        </p>
+
+    </section>
+
+</main>
+
+<a
+    href="../support/support.html"
+    class="support-floating-button"
+>
+    💬 المساعدة
+</a>
+
+<script src="../products/products-data.js"></script>
+
+<script src="offers.js"></script>
+
+<script>
+
+const searchForm =
+    document.getElementById("home-search-form");
+
+const searchInput =
+    document.getElementById("home-search-input");
+
+if (searchForm) {
+
+    searchForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            const search =
+                searchInput.value.trim();
+
+            if (search !== "") {
+
+                window.location.href =
+                    "../products/products.html?search="
+                    + encodeURIComponent(search);
+
+            }
+
+        }
+    );
+
+}
+
+function updateCartCount() {
+
+    const cartCount =
+        document.getElementById("cart-count");
+
+    if (!cartCount) {
+        return;
+    }
+
+    const cart =
+        JSON.parse(
+            localStorage.getItem("vanillaCart")
+        ) || [];
+
+    const totalQuantity =
+        cart.reduce(
+            function (total, item) {
+
+                return total +
+                    Number(item.quantity || 0);
+
+            },
+            0
+        );
+
+    cartCount.textContent =
+        totalQuantity;
+
+}
+
+updateCartCount();
+
+</script>
+
+</body>
+
+</html>
