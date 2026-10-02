@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>مركز المساعدة - متجر فانيلا</title>
+
+
+    <!-- =========================
+         CSS الرئيسي
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+
+    <!-- =========================
+         CSS الخاص بصفحة الدعم
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="support.css"
+    >
+
+</head>
+
+
+<body class="home-page">
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="home-header">
+
+
+        <!-- =========================
+             شريط اللغة وتسجيل الدخول
+        ========================== -->
+
+        <div class="home-language-bar">
+
+            <div class="home-top-left-buttons">
+
+                <button
+                    class="home-language-button"
+                    type="button"
+                >
+                    English
+                </button>
+
+
+                <button
+                    class="home-login-button"
+                    type="button"
+                >
+                    👤 تسجيل الدخول
+                </button>
+
+            </div>
+
+
+            <div class="home-social-links">
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="mailto:store@vanillastore.com">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             شريط الإعلان
+        ========================== -->
+
+        <div class="home-announcement-bar">
+
+            <div class="home-announcement-text">
+
+                <span>
+
+                    🎁 عروض خاصة اليوم
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+
+                    🚚 توصيل سريع داخل بغداد
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+
+                    🛍️ اكتشفي منتجات متجر فانيلا
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+
+                </span>
+
+
+                <span>
+
+                    🎁 عروض خاصة اليوم
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+
+                    🚚 توصيل سريع داخل بغداد
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+
+                    🛍️ اكتشفي منتجات متجر فانيلا
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             الشعار
+        ========================== -->
+
+        <div class="home-logo-bar">
+
+            <div class="home-logo">
+
+                <img
+                    src="../products/static/my_logo.jpg"
+                    alt="شعار متجر فانيلا"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             البحث
+        ========================== -->
+
+        <div class="home-search-bar">
+
+            <form id="home-search-form">
+
+                <input
+                    type="search"
+                    id="home-search-input"
+                    placeholder="ابحث عن منتج أو صفحة..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    🔍
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- =========================
+             القائمة الرئيسية
+        ========================== -->
+
+        <nav class="home-nav">
+
+            <a href="../index.html">
+                الرئيسية
+            </a>
+
+            <a href="../products/products.html">
+                المنتجات
+            </a>
+
+            <a href="../offers/offers.html">
+                العروض %
+            </a>
+
+            <a href="../contact.html">
+                تواصل معنا
+            </a>
+
+        </nav>
+
+
+        <!-- =========================
+             السلة
+        ========================== -->
+
+        <a
+            href="../cart.html"
+            class="home-cart"
+        >
+            🛒 السلة
+            <span id="cart-count">0</span>
+        </a>
+
+
+    </header>
+
+
+
+    <!-- =========================
+         عنوان الصفحة
+    ========================== -->
+
+    <section class="support-header">
+
+        <div class="support-header-content">
+
+            <span class="page-badge">
+                💬 متجر فانيلا
+            </span>
+
+            <h1 class="page-title">
+                مركز المساعدة
+            </h1>
+
+            <p class="page-description">
+                أهلاً بك في متجر فانيلا 👋
+                <br>
+                كيف يمكننا مساعدتك اليوم؟
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         محتوى الدعم
+    ========================== -->
+
+    <main class="support-container">
+
+
+        <!-- =========================
+             المساعدة السريعة
+        ========================== -->
+
+        <section class="quick-help">
+
+            <h2>
+                كيف يمكننا مساعدتك؟
+            </h2>
+
+            <p class="section-description">
+                اختر أحد الخيارات التالية أو اكتب سؤالك في الدردشة.
+            </p>
+
+
+            <div class="help-options">
+
+
+                <button
+                    type="button"
+                    class="help-option"
+                    data-message="أريد الاستفسار عن طلبي."
+                >
+
+                    <span class="help-option-icon">
+                        🛍️
+                    </span>
+
+                    <span>
+                        مشكلة في الطلب
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="help-option"
+                    data-message="أريد معرفة حالة طلبي."
+                >
+
+                    <span class="help-option-icon">
+                        🚚
+                    </span>
+
+                    <span>
+                        أين وصل طلبي؟
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="help-option"
+                    data-message="أريد الاستفسار عن الدفع."
+                >
+
+                    <span class="help-option-icon">
+                        💳
+                    </span>
+
+                    <span>
+                        مشكلة في الدفع
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="help-option"
+                    data-message="أريد معرفة سياسة الاستبدال والاسترجاع."
+                >
+
+                    <span class="help-option-icon">
+                        🔄
+                    </span>
+
+                    <span>
+                        الاستبدال والاسترجاع
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="help-option"
+                    data-message="أريد السؤال عن أحد المنتجات."
+                >
+
+                    <span class="help-option-icon">
+                        📦
+                    </span>
+
+                    <span>
+                        سؤال عن منتج
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="help-option"
+                    data-message="أريد التحدث مع خدمة العملاء."
+                >
+
+                    <span class="help-option-icon">
+                        👩‍💼
+                    </span>
+
+                    <span>
+                        خدمة العملاء
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             الدردشة
+        ========================== -->
+
+        <section class="chat-section">
+
+            <div class="chat-card">
+
+
+                <!-- رأس الدردشة -->
+
+                <div class="chat-header">
+
+                    <div class="chat-agent">
+
+                        <div class="agent-avatar">
+                            💬
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                خدمة عملاء متجر فانيلا
+                            </h3>
+
+                            <span>
+                                ● متاح للمساعدة
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- الرسائل -->
+
+                <div
+                    id="chat-messages"
+                    class="chat-messages"
+                >
+
+
+                    <div class="message bot-message">
+
+                        <div class="message-content">
+
+                            أهلاً بك 👋
+                            <br>
+                            أنا مساعد متجر فانيلا.
+                            <br>
+                            كيف يمكنني مساعدتك؟
+
+                        </div>
+
+                        <span class="message-time">
+                            الآن
+                        </span>
+
+                    </div>
+
+
+                    <!-- الردود السريعة -->
+
+                    <div class="quick-replies">
+
+                        <button
+                            type="button"
+                            class="quick-reply"
+                            data-message="أريد معرفة حالة طلبي"
+                        >
+                            حالة الطلب
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-reply"
+                            data-message="أريد معرفة سياسة الاسترجاع"
+                        >
+                            الاسترجاع
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-reply"
+                            data-message="أريد المساعدة في اختيار منتج"
+                        >
+                            اختيار منتج
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- إدخال الرسالة -->
+
+                <div class="chat-input-area">
+
+                    <input
+                        type="text"
+                        id="chat-input"
+                        placeholder="اكتب رسالتك هنا..."
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        type="button"
+                        id="send-message"
+                    >
+                        إرسال
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+
+        <div class="footer-column">
+
+            <h3>
+                متجر فانيلا
+            </h3>
+
+            <p>
+                متجر إلكتروني يوفر مجموعة متنوعة
+                من المنتجات بأسلوب بسيط وسهل.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                روابط سريعة
+            </h3>
+
+            <a href="../index.html">
+                الرئيسية
+            </a>
+
+            <a href="../products/products.html">
+                المنتجات
+            </a>
+
+            <a href="../offers/offers.html">
+                العروض
+            </a>
+
+            <a href="../cart.html">
+                سلة التسوق
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>
+                التصنيفات
+            </h3>
+
+            <a href="../products/products.html?category=clothes">
+                الملابس
+            </a>
+
+            <a href="../products/products.html?category=perfumes">
+                العطور
+            </a>
+
+            <a href="../products/products.html?category=electronics">
+                الأجهزة الكهربائية
+            </a>
+
+            <a href="../products/products.html?category=accessories">
+                الإكسسوارات
+            </a>
+
+        </div>
+
+
+        <div class="footer-column contact-footer">
+
+            <h3>
+                تحتاج إلى مساعدة؟
+            </h3>
+
+            <p>
+                نحن هنا لمساعدتك.
+                تواصل معنا عبر مركز المساعدة.
+            </p>
+
+            <a href="support.html">
+                💬 الدردشة مع خدمة العملاء
+            </a>
+
+            <p>
+                🕐 خدمة العملاء: يومياً
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================
+         زر المساعدة العائم
+    ========================== -->
+
+    <a
+        href="support.html"
+        class="support-floating-button"
+    >
+        💬 المساعدة
+    </a>
+
+
+
+    <!-- =========================
+         JavaScript
+    ========================== -->
+
+    <script src="support.js"></script>
+
+
+    <script>
+
+        const homeSearchForm =
+            document.getElementById("home-search-form");
+
+
+        if (homeSearchForm) {
+
+            homeSearchForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const searchInput =
+                        document.getElementById(
+                            "home-search-input"
+                        );
+
+
+                    const search =
+                        searchInput.value.trim();
+
+
+                    if (search !== "") {
+
+                        window.location.href =
+                            "../products/products.html?search="
+                            + encodeURIComponent(search);
+
+                    }
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

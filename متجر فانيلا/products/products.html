@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>المنتجات - متجر فانيلا</title>
+
+
+    <!-- CSS الرئيسي للموقع -->
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+
+
+    <!-- CSS الخاص بصفحة المنتجات -->
+
+    <link
+        rel="stylesheet"
+        href="products.css"
+    >
+
+</head>
+
+
+<body class="home-page">
+
+
+    <!-- =====================================================
+         الهيدر
+         ===================================================== -->
+
+    <header class="home-header">
+
+
+        <!-- =================================================
+             شريط اللغة وتسجيل الدخول
+             ================================================= -->
+
+        <div class="home-language-bar">
+
+            <div class="home-top-left-buttons">
+
+                <button
+                    class="home-language-button"
+                    type="button"
+                >
+                    English
+                </button>
+
+
+                <button
+                    class="home-login-button"
+                    type="button"
+                >
+                    👤 تسجيل الدخول
+                </button>
+
+            </div>
+
+
+            <div class="home-social-links">
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="mailto:store@vanillastore.com">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             شريط الإعلان
+             ================================================= -->
+
+        <div class="home-announcement-bar">
+
+            <div class="home-announcement-text">
+
+                <span>
+                    🎁 عروض خاصة اليوم
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                    🚚 توصيل داخل بغداد
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                    🎁 خصومات مميزة
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                </span>
+
+
+                <span>
+                    🎁 عروض خاصة اليوم
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                    🚚 توصيل داخل بغداد
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                    🎁 خصومات مميزة
+                    &nbsp;&nbsp; | &nbsp;&nbsp;
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             الشعار
+             ================================================= -->
+
+        <div class="home-logo-bar">
+
+            <a
+                href="../index.html"
+                class="home-logo"
+            >
+
+                <img
+                    src="../products/static/my_logo.jpg"
+                    alt="شعار متجر فانيلا"
+                >
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             البحث
+             ================================================= -->
+
+        <div class="home-search-bar">
+
+            <form id="home-search-form">
+
+                <input
+                    type="search"
+                    id="home-search-input"
+                    placeholder="ابحث عن منتج أو صفحة..."
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    🔍
+                </button>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- =================================================
+             القائمة الرئيسية
+             ================================================= -->
+
+        <nav class="home-nav">
+
+            <a href="../index.html">
+                الرئيسية
+            </a>
+
+
+            <a
+                href="products.html"
+                class="active"
+            >
+                المنتجات
+            </a>
+
+
+            <a href="../offers/offers.html">
+                العروض %
+            </a>
+
+
+            <a href="../contact.html">
+                تواصل معنا
+            </a>
+
+
+            <a
+                href="../cart.html"
+                class="home-cart"
+            >
+                🛒 السلة
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         عنوان صفحة المنتجات
+         ===================================================== -->
+
+    <section class="page-header">
+
+        <span class="page-badge">
+            🛍️ متجر فانيلا
+        </span>
+
+
+        <h1 class="page-title">
+            منتجات متجر فانيلا
+        </h1>
+
+
+        <p class="page-description">
+            اكتشفي مجموعتنا من المنتجات
+        </p>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         التصنيفات
+         ===================================================== -->
+
+    <section class="categories">
+
+
+        <button
+            class="category-btn active"
+            data-category="all"
+            type="button"
+        >
+            🛍️ الكل
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="clothes"
+            type="button"
+        >
+            👗 الملابس
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="perfumes"
+            type="button"
+        >
+            🌸 العطور
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="electronics"
+            type="button"
+        >
+            📱 الأجهزة
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="accessories"
+            type="button"
+        >
+            💍 الإكسسوارات
+        </button>
+
+
+    </section>
+
+
+
+    <!-- =====================================================
+         المحتوى الرئيسي
+         ===================================================== -->
+
+    <main class="products-layout">
+
+
+        <!-- =================================================
+             الفلاتر
+             ================================================= -->
+
+        <aside class="filters">
+
+            <h2>
+                تصفية المنتجات
+            </h2>
+
+
+            <label for="search-input">
+                البحث
+            </label>
+
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="ابحثي عن منتج..."
+            >
+
+
+            <label for="min-price">
+                السعر الأدنى
+            </label>
+
+
+            <input
+                type="number"
+                id="min-price"
+                placeholder="من"
+            >
+
+
+            <label for="max-price">
+                السعر الأعلى
+            </label>
+
+
+            <input
+                type="number"
+                id="max-price"
+                placeholder="إلى"
+            >
+
+
+            <label for="sort-select">
+                ترتيب المنتجات
+            </label>
+
+
+            <select id="sort-select">
+
+                <option value="latest">
+                    الأحدث
+                </option>
+
+
+                <option value="price-low">
+                    السعر: من الأقل للأعلى
+                </option>
+
+
+                <option value="price-high">
+                    السعر: من الأعلى للأقل
+                </option>
+
+
+                <option value="name">
+                    الاسم
+                </option>
+
+            </select>
+
+
+            <button
+                id="clear-filters"
+                class="clear-btn"
+                type="button"
+            >
+                مسح الفلاتر
+            </button>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             المنتجات
+             ================================================= -->
+
+        <section class="products-section">
+
+
+            <div class="products-top">
+
+                <h2 id="products-title">
+                    جميع المنتجات
+                </h2>
+
+
+                <span id="products-count">
+                    0 منتج
+                </span>
+
+            </div>
+
+
+
+            <!-- الفلاتر الفرعية -->
+
+            <div
+                id="subcategory-filters"
+                class="subcategory-filters"
+            >
+            </div>
+
+
+
+            <!-- المنتجات -->
+
+            <div
+                id="products-container"
+                class="products-grid"
+            >
+            </div>
+
+
+
+            <!-- لا توجد منتجات -->
+
+            <p
+                id="no-products"
+                class="no-products"
+                style="display: none;"
+            >
+                لم يتم العثور على منتجات.
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         الفوتر
+         نفس فوتر الصفحة الرئيسية
+         ===================================================== -->
+
+    <footer class="home-footer">
+
+        <div class="home-footer-container">
+
+
+            <!-- متجر فانيلا -->
+
+            <div class="home-footer-column home-footer-brand">
+
+                <h2>
+                    متجر فانيلا
+                </h2>
+
+                <p class="home-footer-domain">
+                    Vanilla Store
+                </p>
+
+                <p>
+                    تسوّق عبر الإنترنت من متجر فانيلا،
+                    مع منتجات مختارة بعناية
+                    وخدمة مميزة لعملائنا.
+                </p>
+
+                <p class="home-footer-since">
+                    منذ عام 2026
+                </p>
+
+            </div>
+
+
+
+            <!-- العلامات التجارية -->
+
+            <div class="home-footer-column">
+
+                <h3>
+                    العلامات التجارية
+                </h3>
+
+                <a href="#">
+                    العلامات التجارية
+                </a>
+
+                <a href="products.html">
+                    المنتجات
+                </a>
+
+                <a href="../offers/offers.html">
+                    العروض
+                </a>
+
+            </div>
+
+
+
+            <!-- الخدمات -->
+
+            <div class="home-footer-column">
+
+                <h3>
+                    الخدمات
+                </h3>
+
+                <a href="#">
+                    مدوّنة التقنية
+                </a>
+
+                <a href="#">
+                    الطلبات بالجملة
+                </a>
+
+                <a href="#">
+                    استفسارات الشركات
+                </a>
+
+            </div>
+
+
+
+            <!-- حول متجر فانيلا -->
+
+            <div class="home-footer-column">
+
+                <h3>
+                    حول متجر فانيلا
+                </h3>
+
+                <a href="#">
+                    من نحن
+                </a>
+
+                <a href="#">
+                    سياسة الخصوصية
+                </a>
+
+                <a href="#">
+                    سياسة الاسترداد
+                </a>
+
+                <a href="#">
+                    شروط الخدمة
+                </a>
+
+            </div>
+
+
+
+            <!-- تواصل معنا -->
+
+            <div class="home-footer-column home-footer-location">
+
+                <h3>
+                    تواصل معنا
+                </h3>
+
+                <p>
+                    📍 بغداد، العراق
+                </p>
+
+                <p>
+                    📧 store@vanillastore.com
+                </p>
+
+                <p>
+                    📞 6543
+                </p>
+
+                <p>
+                    WhatsApp
+                    +964 774 802 5119
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- أسفل الفوتر -->
+
+        <div class="home-footer-bottom">
+
+            <p>
+                © متجر فانيلا 2026
+            </p>
+
+
+            <div class="home-footer-social">
+
+                <a href="#">
+                    f
+                </a>
+
+                <a href="#">
+                    ◎
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         زر المساعدة العائم
+         ===================================================== -->
+
+    <a
+        href="../support/support.html"
+        class="support-floating-button"
+    >
+        💬 المساعدة
+    </a>
+
+
+
+    <!-- =====================================================
+         JavaScript
+         ===================================================== -->
+
+    <script src="products-data.js"></script>
+
+    <script src="products.js"></script>
+
+
+
+    <!-- =====================================================
+         البحث الموجود في الهيدر
+         ===================================================== -->
+
+    <script>
+
+        const homeSearchForm =
+            document.getElementById("home-search-form");
+
+
+        if (homeSearchForm) {
+
+            homeSearchForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const search =
+                        document
+                            .getElementById("home-search-input")
+                            .value
+                            .trim();
+
+
+                    if (search !== "") {
+
+                        const searchParams =
+                            new URLSearchParams();
+
+
+                        searchParams.set(
+                            "search",
+                            search
+                        );
+
+
+                        window.location.href =
+                            "products.html?" +
+                            searchParams.toString();
+
+                    }
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

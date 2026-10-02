@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>سلة المشتريات - متجر فانيلا</title>
+
+    <!-- التنسيق المشترك للموقع -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- تنسيق صفحة السلة -->
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+
+
+<body class="home-page">
+
+
+<!-- =====================================================
+     الهيدر
+     ===================================================== -->
+
+<header class="home-header">
+
+    <!-- الشريط العلوي -->
+
+    <div class="home-language-bar">
+
+        <div class="home-top-left-buttons">
+
+            <button
+                type="button"
+                class="home-language-button"
+            >
+                English
+            </button>
+
+            <a
+                href="account.html"
+                class="home-login-button"
+            >
+                تسجيل الدخول
+            </a>
+
+        </div>
+
+
+        <div class="home-social-links">
+
+            <a href="#" aria-label="Instagram">
+                Instagram
+            </a>
+
+            <a href="#" aria-label="Facebook">
+                Facebook
+            </a>
+
+            <a href="#" aria-label="Email">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- شريط الإعلان -->
+
+    <div class="home-announcement-bar">
+
+        <div class="home-announcement-text">
+
+            أهلاً بكِ في متجر فانيلا ✨
+            اكتشفي أحدث المنتجات والعروض
+
+        </div>
+
+    </div>
+
+
+    <!-- الشعار -->
+
+    <div class="home-logo-bar">
+
+        <a href="index.html">
+
+            <img
+                src="products/static/my_logo.jpg"
+                alt="متجر فانيلا"
+                class="home-logo"
+            >
+
+        </a>
+
+    </div>
+
+
+    <!-- البحث -->
+
+    <div class="home-search-bar">
+
+        <form id="home-search-form">
+
+            <input
+                type="search"
+                id="home-search-input"
+                placeholder="ابحثي عن منتج..."
+                autocomplete="off"
+            >
+
+            <button type="submit">
+                🔍
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- القائمة -->
+
+    <nav class="home-nav">
+
+        <a href="index.html">
+            الرئيسية
+        </a>
+
+        <a href="products/products.html">
+            المنتجات
+        </a>
+
+        <a href="offers/offers.html">
+            العروض %
+        </a>
+
+        <a href="contact.html">
+            تواصل معنا
+        </a>
+
+        <a
+            href="cart.html"
+            class="home-cart active"
+        >
+            🛒 السلة
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     محتوى السلة
+     ===================================================== -->
+
+<main class="cart-page">
+
+    <div class="cart-container">
+
+
+        <h1 class="cart-title">
+            🛒 سلة المشتريات
+        </h1>
+
+
+        <!-- =================================================
+             المنتجات
+             ================================================= -->
+
+        <section
+            id="cart-items"
+            class="cart-items"
+        ></section>
+
+
+        <!-- =================================================
+             السلة الفارغة
+             ================================================= -->
+
+        <section
+            id="empty-cart"
+            class="empty-cart"
+        >
+
+            <div class="empty-cart-icon">
+                🛒
+            </div>
+
+            <h2>
+                السلة فارغة
+            </h2>
+
+            <p>
+                لم تقومي بإضافة أي منتجات إلى السلة بعد.
+            </p>
+
+            <a
+                href="products/products.html"
+                class="empty-cart-link"
+            >
+                تصفحي المنتجات
+            </a>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ملخص السلة
+             ================================================= -->
+
+        <section
+            id="cart-summary"
+            class="cart-summary"
+        >
+
+            <!-- عرض المزايا -->
+
+            <div
+                id="cart-benefits"
+                class="cart-benefits"
+            ></div>
+
+
+            <!-- تفاصيل الحساب -->
+
+            <div class="cart-summary-row">
+
+                <span>
+                    عدد المنتجات
+                </span>
+
+                <strong id="cart-total-items">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="cart-summary-row">
+
+                <span>
+                    مجموع المنتجات
+                </span>
+
+                <strong id="cart-subtotal">
+                    0 د.ع
+                </strong>
+
+            </div>
+
+
+            <div
+                id="discount-row"
+                class="cart-summary-row discount-row"
+            >
+
+                <span>
+                    الخصم
+                </span>
+
+                <strong id="cart-discount">
+                    0 د.ع
+                </strong>
+
+            </div>
+
+
+            <div
+                id="delivery-row"
+                class="cart-summary-row delivery-row"
+            >
+
+                <span>
+                    التوصيل
+                </span>
+
+                <strong id="cart-delivery">
+                    0 د.ع
+                </strong>
+
+            </div>
+
+
+            <!-- المجموع النهائي -->
+
+            <div class="cart-summary-row cart-summary-total">
+
+                <span>
+                    المجموع النهائي
+                </span>
+
+                <strong id="cart-total-price">
+                    0 د.ع
+                </strong>
+
+            </div>
+
+
+            <!-- الأزرار -->
+
+            <div class="cart-actions">
+
+                <button
+                    type="button"
+                    id="checkout-button"
+                    class="checkout-button"
+                >
+                    متابعة الطلب
+                </button>
+
+
+                <button
+                    type="button"
+                    id="clear-cart-button"
+                    class="clear-cart-button"
+                >
+                    إفراغ السلة
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+
+<!-- زر المساعدة -->
+
+<a
+    href="support/support.html"
+    class="support-floating-button"
+>
+    💬 المساعدة
+</a>
+
+
+
+<!-- JavaScript -->
+
+<script src="cart.js"></script>
+
+</body>
+
+</html>
+
